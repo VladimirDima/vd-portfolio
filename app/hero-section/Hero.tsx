@@ -63,7 +63,7 @@ const Hero = () => {
             <Image
               src={profile}
               priority
-              alt="Victor's headshot"
+              alt="Vladimir's headshot"
               data-blobity-tooltip="HI!"
               data-blobity-invert="false"
               className=" w-[150px] rounded-[16px] grayscale hover:grayscale-0 md:w-[200px] md:rounded-[32px] lg:w-[245px]"

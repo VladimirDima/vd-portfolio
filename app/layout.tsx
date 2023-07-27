@@ -42,8 +42,8 @@ export const metadata: Metadata = {
     title: "Vladimir Dima — Frontend Developer",
     description:
       "Frontend Developer, currently at Evryone Group. Focused on interfaces and experiences, working remotely from Copenhagen, Denmark.",
-    url: "https://www.victorwilliams.me/",
-    siteName: "www.victorwilliams.me",
+    url: "https://vd-portfolio.vercel.app/",
+    siteName: "vd-portfolio.vercel.app",
     // images: [
     //   {
     //     url: "https://user-images.githubusercontent.com/84178696/228620835-e3cc5c9b-72fc-4f54-a628-407ef7b650f5.png",
