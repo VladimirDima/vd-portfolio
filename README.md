@@ -1,4 +1,4 @@
-# Personal Portfolio Website — v1
+<!-- # Personal Portfolio Website — v1
 
 My name is Vladimir Dima, and I’m a front-end engineer and product designer based in Denmark, Copenhagen. My passion lies in creating software that solves real-world problems and positively impacts people’s lives.
 
@@ -61,4 +61,4 @@ While I would not be accepting contributions or pull requests at this time, I ap
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://choosealicense.com/licenses/mit/) -->
