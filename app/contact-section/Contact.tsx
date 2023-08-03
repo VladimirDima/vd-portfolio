@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { monaSans } from "../fonts/monaSans";
+import { monaSans } from "../fonts/MonaSans/monaSans";
 import "../animations/animate.css";
 import AnimatedBody from "../animations/AnimatedBody";
 import AnimatedTitle from "../animations/AnimatedTitle";

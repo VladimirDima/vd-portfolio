@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { monaSans } from "../fonts/monaSans";
+import { monaSans } from "../fonts/MonaSans/monaSans";
+import { pilowLava } from "../fonts/pilowlava/pilowLava";
 import { motion } from "framer-motion";
 import { imageAnimation, bodyAnimation } from "../animations/animations";
 import AnimatedWords from "../animations/AnimatedWords";
@@ -50,7 +51,7 @@ const Hero = () => {
 
       <div className="-mt-36 flex flex-col items-center justify-center sm:-mt-20 lg:my-40 lg:-mt-2 lg:py-40 ">
         <div
-          className={`relative flex flex-col items-center justify-center ${monaSans.className}   `}
+          className={`relative flex flex-col items-center justify-center ${pilowLava.className}   `}
         >
           <AnimatedWords
             title="VLADIMIR DIMA "
@@ -66,7 +67,7 @@ const Hero = () => {
               alt="Vladimir's headshot"
               data-blobity-tooltip="HI!"
               data-blobity-invert="false"
-              className=" w-[150px] rounded-[16px] grayscale hover:grayscale-0 md:w-[200px] md:rounded-[32px] lg:w-[245px]"
+              className=" w-[150px] rounded-[16px] grayscale hover:grayscale-0 md:w-[200px] md:rounded-[32px] lg:w-[205px]"
             />
           </motion.div>
         </div>

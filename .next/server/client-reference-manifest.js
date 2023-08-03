@@ -369,6 +369,7 @@ self.__RSC_MANIFEST={
   "__entry_css_files__": {
     "/Users/vladimirdima/Desktop/portfolio/vladimir-dima-portfolio/app/page": [
       "static/css/_app-client_app_contact-section_Contact_tsx.css",
+      "static/css/_app-client_app_blog-section_BlogGrid_tsx.css",
       "static/css/_app-client_app_about-section_About_tsx.css",
       "static/css/app/page.css"
     ],
@@ -594,7 +595,7 @@ self.__RSC_MANIFEST={
       ]
     }
   },
-  "/Users/vladimirdima/Desktop/portfolio/vladimir-dima-portfolio/node_modules/@next/font/local/target.css?{\"path\":\"app/fonts/monaSans.ts\",\"import\":\"\",\"arguments\":[{\"src\":[{\"path\":\"./Mona-Sans-BlackNarrow.woff2\",\"weight\":\"900\",\"style\":\"normal\"},{\"path\":\"./Mona-Sans-BlackNarrowItalic.woff2\",\"weight\":\"900\",\"style\":\"italic\"},{\"path\":\"./Mona-Sans-BoldNarrow.woff2\",\"weight\":\"700\",\"style\":\"normal\"},{\"path\":\"./Mona-Sans-BoldNarrowItalic.woff2\",\"weight\":\"700\",\"style\":\"italic\"},{\"path\":\"./Mona-Sans-LightNarrow.woff2\",\"weight\":\"300\",\"style\":\"normal\"},{\"path\":\"./Mona-Sans-LightNarrowItalic.woff2\",\"weight\":\"300\",\"style\":\"italic\"},{\"path\":\"./Mona-Sans-MediumNarrow.woff2\",\"weight\":\"500\",\"style\":\"normal\"},{\"path\":\"./Mona-Sans-MediumNarrowItalic.woff2\",\"weight\":\"500\",\"style\":\"italic\"},{\"path\":\"./Mona-Sans-SemiBoldNarrow.woff2\",\"weight\":\"600\",\"style\":\"normal\"},{\"path\":\"./Mona-Sans-SemiBoldNarrowItalic.woff2\",\"weight\":\"600\",\"style\":\"italic\"},{\"path\":\"./Mona-Sans-ExtraBoldNarrow.woff2\",\"weight\":\"800\",\"style\":\"normal\"},{\"path\":\"./Mona-Sans-UltraLightNarrow.woff2\",\"weight\":\"200\",\"style\":\"normal\"},{\"path\":\"./Mona-Sans-RegularNarrowItalic.woff2\",\"weight\":\"400\",\"style\":\"italic\"}]}],\"variableName\":\"monaSans\"}": {
+  "/Users/vladimirdima/Desktop/portfolio/vladimir-dima-portfolio/node_modules/@next/font/local/target.css?{\"path\":\"app/fonts/pilowlava/pilowLava.ts\",\"import\":\"\",\"arguments\":[{\"src\":[{\"path\":\"./Pilowlava-Regular.woff2\",\"weight\":\"200\",\"style\":\"normal\"}]}],\"variableName\":\"pilowLava\"}": {
     "default": {
       "id": "null",
       "name": "default",
@@ -939,6 +940,16 @@ self.__RSC_MANIFEST={
       "name": "default",
       "chunks": [
         "static/css/_app-client_app_about-section_About_tsx.css",
+        "static/css/_app-client_app_contact-section_Contact_tsx.css"
+      ]
+    }
+  },
+  "/Users/vladimirdima/Desktop/portfolio/vladimir-dima-portfolio/node_modules/@next/font/local/target.css?{\"path\":\"app/fonts/MonaSans/monaSans.ts\",\"import\":\"\",\"arguments\":[{\"src\":[{\"path\":\"./Mona-Sans-BlackNarrow.woff2\",\"weight\":\"900\",\"style\":\"normal\"},{\"path\":\"./Mona-Sans-BlackNarrowItalic.woff2\",\"weight\":\"900\",\"style\":\"italic\"},{\"path\":\"./Mona-Sans-BoldNarrow.woff2\",\"weight\":\"700\",\"style\":\"normal\"},{\"path\":\"./Mona-Sans-BoldNarrowItalic.woff2\",\"weight\":\"700\",\"style\":\"italic\"},{\"path\":\"./Mona-Sans-LightNarrow.woff2\",\"weight\":\"300\",\"style\":\"normal\"},{\"path\":\"./Mona-Sans-LightNarrowItalic.woff2\",\"weight\":\"300\",\"style\":\"italic\"},{\"path\":\"./Mona-Sans-MediumNarrow.woff2\",\"weight\":\"500\",\"style\":\"normal\"},{\"path\":\"./Mona-Sans-MediumNarrowItalic.woff2\",\"weight\":\"500\",\"style\":\"italic\"},{\"path\":\"./Mona-Sans-SemiBoldNarrow.woff2\",\"weight\":\"600\",\"style\":\"normal\"},{\"path\":\"./Mona-Sans-SemiBoldNarrowItalic.woff2\",\"weight\":\"600\",\"style\":\"italic\"},{\"path\":\"./Mona-Sans-ExtraBoldNarrow.woff2\",\"weight\":\"800\",\"style\":\"normal\"},{\"path\":\"./Mona-Sans-UltraLightNarrow.woff2\",\"weight\":\"200\",\"style\":\"normal\"},{\"path\":\"./Mona-Sans-RegularNarrowItalic.woff2\",\"weight\":\"400\",\"style\":\"italic\"}]}],\"variableName\":\"monaSans\"}": {
+    "default": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/_app-client_app_blog-section_BlogGrid_tsx.css",
         "static/css/_app-client_app_contact-section_Contact_tsx.css"
       ]
     }

@@ -1,7 +1,7 @@
 import BlogCard from "./BlogCard";
 import { blogDetails } from "./blogDetails";
 import AnimatedWords2 from "../animations/AnimatedWords2";
-import { monaSans } from "../fonts/monaSans";
+import { monaSans } from "../fonts/MonaSans/monaSans";
 import AnimatedBody from "../animations/AnimatedBody";
 
 const Blog = () => {
