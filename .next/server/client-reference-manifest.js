@@ -949,8 +949,7 @@ self.__RSC_MANIFEST={
       "id": "null",
       "name": "default",
       "chunks": [
-        "static/css/_app-client_app_blog-section_BlogGrid_tsx.css",
-        "static/css/_app-client_app_contact-section_Contact_tsx.css"
+        "static/css/_app-client_app_blog-section_BlogGrid_tsx.css"
       ]
     }
   }

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { monaSans } from "../fonts/MonaSans/monaSans";
+import { pilowLava } from "../fonts/pilowlava/pilowLava";
 import "../animations/animate.css";
 import AnimatedBody from "../animations/AnimatedBody";
 import AnimatedTitle from "../animations/AnimatedTitle";
@@ -18,12 +18,12 @@ const Contact = () => {
     >
       <div className="mx-auto  flex w-[90%] flex-col items-center justify-center pt-10 md:pt-0">
         <div
-          className={`flex flex-col items-start justify-center ${monaSans.className} relative w-full sm:items-center lg:max-w-[1440px] `}
+          className={`flex flex-col items-start justify-center ${pilowLava.className} relative w-full sm:items-center lg:max-w-[1440px] `}
         >
           <AnimatedWords2
             title={"Let's Talk"}
             style={
-              "flex max-w-[500px] flex-col items-start text-left text-[150px] font-extrabold uppercase leading-[0.9em] text-[#e4ded7] sm:max-w-full sm:flex-row sm:items-center sm:justify-center sm:text-center sm:text-[170px] md:text-[200px] lg:text-center lg:text-[270px] xl:text-[390px]"
+              "flex max-w-[500px] flex-col items-start text-left text-[90px] font-extrabold uppercase leading-[0.9em] text-[#e4ded7] sm:max-w-full sm:flex-row sm:items-center sm:justify-center sm:text-center sm:text-[90px] md:text-[120px] lg:text-center lg:text-[140px] 2xl:text-[210px]"
             }
           />
           {/* <Image

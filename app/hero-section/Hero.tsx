@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { monaSans } from "../fonts/MonaSans/monaSans";
 import { pilowLava } from "../fonts/pilowlava/pilowLava";
 import { motion } from "framer-motion";
 import { imageAnimation, bodyAnimation } from "../animations/animations";
@@ -49,16 +48,16 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="-mt-36 flex flex-col items-center justify-center sm:-mt-20 lg:my-40 lg:-mt-2 lg:py-40 ">
+      <div className="-mt-36 flex flex-col items-center justify-center sm:-mt-20 lg:my-40  lg:py-40 ">
         <div
           className={`relative flex flex-col items-center justify-center ${pilowLava.className}   `}
         >
           <AnimatedWords
             title="VLADIMIR DIMA "
-            style="inline-block overflow-hidden pt-1"
+            style="inline-block overflow-hidden pt-1 h-[60px] sm:h-[100px] md:h-[130px] lg:h-[150px] xl:h-[180px]"
           />
           <motion.div
-            className="absolute bottom-[-110px] mx-auto sm:bottom-[-100px] md:bottom-[-130px] lg:bottom-[-150px]"
+            className="absolute bottom-[-140px] mx-auto sm:bottom-[-100px] md:bottom-[-70px] lg:bottom-[-20px] xl:bottom-[10px]"
             variants={imageAnimation}
           >
             <Image
