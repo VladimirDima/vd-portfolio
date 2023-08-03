@@ -13,7 +13,7 @@ const syne = Syne({
 export const metadata: Metadata = {
   title: "Vladimir Dima — Frontend Developer",
   description:
-    "Frontend Developer and Product Designer, currently at Evryone Group. Focused on interfaces and experiences, working remotely from Copenhagen, Denmark.",
+    "Frontend Developer and Product Designer, currently at Evryone Group. Focused on interfaces and experiences, working from Copenhagen, Denmark.",
   generator: "Next.js",
   applicationName: "Vladimir Dima",
   keywords: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Vladimir Dima — Frontend Developer",
     description:
-      "Frontend Developer, currently at Evryone Group. Focused on interfaces and experiences, working remotely from Copenhagen, Denmark.",
+      "Frontend Developer, currently at Evryone Group. Focused on interfaces and experiences, working from Copenhagen, Denmark.",
     url: "https://vd-portfolio.vercel.app/",
     siteName: "vd-portfolio.vercel.app",
     // images: [
