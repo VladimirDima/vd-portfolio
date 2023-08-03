@@ -369,7 +369,6 @@ self.__RSC_MANIFEST={
   "__entry_css_files__": {
     "/Users/vladimirdima/Desktop/portfolio/vladimir-dima-portfolio/app/page": [
       "static/css/_app-client_app_contact-section_Contact_tsx.css",
-      "static/css/_app-client_app_blog-section_BlogGrid_tsx.css",
       "static/css/_app-client_app_about-section_About_tsx.css",
       "static/css/app/page.css"
     ],
@@ -926,22 +925,21 @@ self.__RSC_MANIFEST={
       ]
     }
   },
-  "/Users/vladimirdima/Desktop/portfolio/vladimir-dima-portfolio/app/globals.css": {
-    "default": {
-      "id": "null",
-      "name": "default",
-      "chunks": [
-        "static/css/_app-client_app_blog-section_BlogGrid_tsx.css",
-        "static/css/_app-client_app_globals_css.css"
-      ]
-    }
-  },
   "/Users/vladimirdima/Desktop/portfolio/vladimir-dima-portfolio/node_modules/@next/font/google/target.css?{\"path\":\"app/layout.tsx\",\"import\":\"Syne\",\"arguments\":[{\"subsets\":[\"latin\"],\"display\":\"block\",\"weight\":[\"400\",\"500\",\"600\",\"700\",\"800\"]}],\"variableName\":\"syne\"}": {
     "default": {
       "id": "null",
       "name": "default",
       "chunks": [
         "static/css/_app-client_node_modules_next_font_google_target_css_path_app_layout_tsx_import_Syne_argument-4f00c6.css"
+      ]
+    }
+  },
+  "/Users/vladimirdima/Desktop/portfolio/vladimir-dima-portfolio/app/globals.css": {
+    "default": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/_app-client_app_globals_css.css"
       ]
     }
   }
