@@ -47,7 +47,7 @@ const ProjectCard = ({
       >
         {available ? (
           <>
-            <Link
+            {/* <Link
               href={github}
               target="_blank"
               className="rounded-full"
@@ -62,7 +62,7 @@ const ProjectCard = ({
                 data-blobity-offset-y="4"
                 data-blobity-magnetic="true"
               />
-            </Link>
+            </Link> */}
             <Link href={demo} target="_blank" aria-label="Open Live Demo">
               <FontAwesomeIcon
                 icon={faLink}
