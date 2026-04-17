@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { ProjectProps } from "./projectDetails";
 import Link from "next/link";
 import Image from "next/image";
@@ -8,8 +7,13 @@ import AnimatedTitle from "../animations/AnimatedTitle";
 import AnimatedBody from "../animations/AnimatedBody";
 import { motion } from "framer-motion";
 
+type ProjectCardProps = ProjectProps & {
+  sourceTab: "dev" | "design" | "apps";
+};
+
 const ProjectCard = ({
   id,
+  slug,
   name,
   description,
   technologies,
@@ -17,7 +21,10 @@ const ProjectCard = ({
   demo,
   image,
   available,
-}: ProjectProps) => {
+  sourceTab,
+}: ProjectCardProps) => {
+  const caseStudyHref = `/projects/${slug}?fromTab=${sourceTab}`;
+
   return (
     <motion.div
       style={
@@ -49,6 +56,13 @@ const ProjectCard = ({
       >
         {available ? (
           <>
+            <Link
+              href={caseStudyHref}
+              className="rounded-xl bg-white px-4 py-2 text-[14px] font-semibold md:px-5 md:py-3 md:text-[16px] lg:px-6 lg:py-4 lg:text-[18px]"
+              aria-label={`Open case study for ${name}`}
+            >
+              Case Study
+            </Link>
             {/* <Link
               href={github}
               target="_blank"
@@ -80,20 +94,11 @@ const ProjectCard = ({
         ) : (
           <div className=" flex items-center justify-center gap-4">
             <Link
-              href={github}
-              target="_blank"
-              className="mt-1 rounded-full"
-              aria-label="Open GitHub Repository"
+              href={caseStudyHref}
+              className="rounded-xl bg-white px-4 py-2 text-[14px] font-semibold md:px-5 md:py-3 md:text-[16px] lg:px-6 lg:py-4 lg:text-[18px]"
+              aria-label={`Open case study for ${name}`}
             >
-              <FontAwesomeIcon
-                icon={faGithub}
-                className=" w-[20px]  rounded-full bg-white p-5 text-[20px] md:w-[25px] md:text-[24px] lg:w-[30px] lg:text-[28px]"
-                data-blobity
-                data-blobity-radius="38"
-                data-blobity-offset-x="4"
-                data-blobity-offset-y="4"
-                data-blobity-magnetic="true"
-              />
+              Case Study
             </Link>
             <div className=" rounded-xl bg-white px-4 py-2 md:px-5 md:py-3 lg:px-6 lg:py-4">
               <h3 className="text-[16px] md:text-[18px] lg:text-[20px] ">
