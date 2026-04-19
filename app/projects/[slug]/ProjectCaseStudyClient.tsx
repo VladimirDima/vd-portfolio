@@ -58,12 +58,18 @@ const ProjectCaseStudyClient = ({
         initial={animateEntry ? "initial" : false}
         animate={isExiting ? "exit" : "visible"}
       >
-        <motion.div variants={pageStaggerItem}>
+        <motion.div
+          variants={pageStaggerItem}
+          className="fixed right-5 top-5 z-50 md:right-10 md:top-8 lg:right-16 lg:top-10"
+        >
           <TransitionLink
             href={backToProjectsHref}
-            className="mb-10 inline-flex text-sm uppercase tracking-wider text-[#e4ded7]/70 transition-colors hover:text-[#e4ded7]"
+            aria-label="Back to projects"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-[#e4ded7]/25 bg-[#0E1016]/90 text-[26px] font-light leading-none text-[#e4ded7] shadow-lg backdrop-blur-sm transition-colors hover:border-[#e4ded7]/55 hover:bg-[#212531] md:h-12 md:w-12 md:text-[28px]"
           >
-            Back to projects
+            <span aria-hidden className="-mt-0.5 block">
+              ×
+            </span>
           </TransitionLink>
         </motion.div>
 
@@ -90,13 +96,16 @@ const ProjectCaseStudyClient = ({
         </motion.header>
 
         <motion.section variants={pageStaggerItem} className="pb-12 md:pb-20">
-          <div className="relative h-[320px] overflow-hidden rounded-[28px] bg-[#212531] md:h-[760px]">
-            <Image
-              src={firstPageImage}
-              alt={`${name} image 1`}
-              fill
-              className="object-cover"
-            />
+          <div className="relative h-[320px] overflow-hidden rounded-[22px] bg-[#212531] md:h-[760px] md:rounded-[26px]">
+            <div className="absolute inset-3 overflow-hidden rounded-[14px] md:inset-5 md:rounded-[18px] lg:inset-6 lg:rounded-[20px]">
+              <Image
+                src={firstPageImage}
+                alt={`${name} image 1`}
+                fill
+                sizes="(max-width: 768px) 100vw, min(1280px, 90vw)"
+                className="object-cover object-center"
+              />
+            </div>
           </div>
         </motion.section>
 
@@ -140,13 +149,16 @@ const ProjectCaseStudyClient = ({
             variants={pageStaggerItem}
             className="pb-12 md:py-20"
           >
-            <div className="relative h-[320px] overflow-hidden rounded-[28px] bg-[#212531] md:h-[760px]">
-              <Image
-                src={pageImage}
-                alt={`${name} image ${index + 2}`}
-                fill
-                className="object-cover"
-              />
+            <div className="relative h-[320px] overflow-hidden rounded-[22px] bg-[#212531] md:h-[760px] md:rounded-[26px]">
+              <div className="absolute inset-3 overflow-hidden rounded-[14px] md:inset-5 md:rounded-[18px] lg:inset-6 lg:rounded-[20px]">
+                <Image
+                  src={pageImage}
+                  alt={`${name} image ${index + 2}`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, min(1280px, 90vw)"
+                  className="object-cover object-center"
+                />
+              </div>
             </div>
           </motion.section>
         ))}
