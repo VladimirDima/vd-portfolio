@@ -1,4 +1,3 @@
-import SongCarousel from "./SongCarousel";
 import "../animations/animate.css";
 import AnimatedBody from "../animations/AnimatedBody";
 import AnimatedTitle from "../animations/AnimatedTitle";
@@ -12,7 +11,7 @@ const About = () => {
       <div className="mx-auto flex w-[90%] flex-col items-center justify-center lg:max-w-[1212.8px]">
         <AnimatedTitle
           text={
-            "Crafting captivating digital experiences with pixel-perfect precision."
+            "Crafting digital experiences with a focus on clarity, performance, and detail."
           }
           className={
             "mb-10 text-left text-[40px] font-bold leading-[0.9em] tracking-tighter text-[#e4ded7] sm:text-[45px] md:mb-16 md:text-[60px] lg:text-[80px]"
@@ -25,7 +24,7 @@ const About = () => {
           <div className="mb-10 flex w-[100%] flex-col gap-4 text-[18px] font-medium  leading-relaxed tracking-wide text-[#e4ded7] md:mb-16 md:gap-6 md:text-[20px] md:leading-relaxed lg:mb-16  lg:max-w-[90%] lg:text-[24px] ">
             <AnimatedBody
               text={
-                "My passion lies in crafting captivating user experiences through code. From responsive designs to smooth animations, I love making websites that are both visually appealing and user-friendly."
+                "I build modern web interfaces that balance aesthetics and functionality. Most of my work sits at the intersection of frontend development, design systems, and product thinking — turning ideas into scalable and maintainable digital products."
               }
             />
             <AnimatedBody
@@ -36,12 +35,12 @@ const About = () => {
             />
             <AnimatedBody
               text={
-                "In addition to my work in web development, I’m also an active member of the arts and culture scene in Copenhagen. As part of two separate organisations, I help organise and facilitate art exhibitions, concerts, workshops and parties."
+                "Outside of development, I’m involved in Copenhagen’s arts and culture scene, where I help organize exhibitions, concerts, and events. That environment influences how I think about experience, atmosphere, and interaction."
               }
             />
             <AnimatedBody
               text={
-                "When I'm not busy doing that, I spend my time delving into electronic music making and more recently, tickering with music technology (I'm in the proceess of buulding my own synthesiszer)"
+                "Lately, I’ve also been exploring sound and hardware — building electronic music and experimenting with synthesis."
               }
             />
           </div>
@@ -58,7 +57,7 @@ const About = () => {
               />
               <AnimatedBody
                 text={
-                  "JavaScript(ES6+), React, Vue, Angular, TypeScript, HTML5, Git/GitHub, Electron, WebGL, GSAP, three.js, Framer Motion"
+                  "JavaScript (ES6+), TypeScript, React, Vue, Angular, Next.js, HTML5, Component-based architecture, Responsive design, Accessibility, JavaScript (ES6+), TypeScript, React, Vue, Angular, Next.js, HTML5, Component-based architecture, Responsive design, Accessibility,CSS, SCSS, Tailwind CSS, Material UI, Bootstrap, Design systems, UI component libraries, Animations (GSAP, Framer Motion), Three.js, WebGL, Sanity CMS, Umbraco, WordPress (custom themes), Headless CMS architecture, Content modeling, Monorepos (Nx / Turborepo), Node.js, npm, Git, Build tools, Performance optimization, SEO, Modular architecture"
                 }
               />
             </div>

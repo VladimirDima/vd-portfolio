@@ -1,5 +1,10 @@
 import ProjectCard from "./ProjectCard";
-import { devProjects, designProjects, ProjectProps } from "./projectDetails";
+import {
+  appsProjects,
+  devProjects,
+  designProjects,
+  ProjectProps,
+} from "./projectDetails";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -92,12 +97,14 @@ const ProjectGrid = () => {
           exit="hidden"
           variants={tabVariants}
           transition={{ duration: 0.5 }}
-          className="grid w-[90%] grid-cols-1 grid-rows-2 gap-y-10 gap-x-6 lg:max-w-[1200px] lg:grid-cols-1"
+          className="grid w-[90%] grid-cols-1 gap-y-10 gap-x-6 md:grid-cols-2 lg:max-w-[1400px] lg:grid-cols-3"
         >
           {(
             activeTab === "design"
               ? designProjects
-              : devProjects
+              : activeTab === "apps"
+                ? appsProjects
+                : devProjects
           ).map(
             (project: ProjectProps) => (
               <ProjectCard

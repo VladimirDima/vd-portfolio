@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Syne } from "@next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import BlobityProvider from "./BlobityProvider";
+import { PageTransitionProvider } from "./context/PageTransitionContext";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -83,7 +84,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className={`${syne.className} scroll-smooth scrollbar-thin scrollbar-track-[#0E1016] scrollbar-thumb-[#212531]`}
       >
         <BlobityProvider />
-        {children}
+        <PageTransitionProvider>{children}</PageTransitionProvider>
         <Analytics />
       </body>
     </html>

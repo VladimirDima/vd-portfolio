@@ -1,18 +1,36 @@
 "use client";
 import Hero from "./hero-section/Hero";
-import { useEffect } from "react";
-import { ScrollerMotion } from "scroller-motion";
+import { useEffect, useLayoutEffect, useState } from "react";
 import PreLoader from "./animations/PreLoader/PreLoader";
 import NavBar from "./navbar/NavBar";
+import { motion } from "framer-motion";
+import { usePageTransition } from "./context/PageTransitionContext";
+import {
+  pageStaggerContainer,
+  pageStaggerItem,
+} from "./animations/pageTransitionVariants";
 
 import dynamic from "next/dynamic";
 const Work = dynamic(() => import("./work-section/Work"));
 const About = dynamic(() => import("./about-section/About"));
-const Blog = dynamic(() => import("./blog-section/BlogGrid"));
 const Contact = dynamic(() => import("./contact-section/Contact"));
 const Footer = dynamic(() => import("./footer/Footer"));
 
 export default function Home() {
+  const { isExiting } = usePageTransition();
+  const [animateEntry, setAnimateEntry] = useState(false);
+
+  useLayoutEffect(() => {
+    try {
+      if (sessionStorage.getItem("portfolioEnter") === "home") {
+        sessionStorage.removeItem("portfolioEnter");
+        setAnimateEntry(true);
+      }
+    } catch {
+      // ignore
+    }
+  }, []);
+
   useEffect(() => {
     if (window.location.hash) {
       if (window.location.hash === "#work") {
@@ -35,18 +53,35 @@ export default function Home() {
     <>
       <PreLoader />
 
-      <NavBar />
+      <motion.div
+        key={animateEntry ? "enter" : "base"}
+        className="w-full"
+        variants={pageStaggerContainer}
+        initial={animateEntry ? "initial" : false}
+        animate={isExiting ? "exit" : "visible"}
+      >
+        <motion.div className="w-full" variants={pageStaggerItem}>
+          <NavBar />
+        </motion.div>
 
-      {/* <ScrollerMotion> */}
-      <main className="flex flex-col items-center justify-center">
-        <Hero />
-        <Work />
-        <About />
-        {/* <Blog /> */}
-        <Contact />
-        <Footer />
-      </main>
-      {/* </ScrollerMotion> */}
+        <main className="flex w-full flex-col items-stretch">
+          <motion.div className="w-full" variants={pageStaggerItem}>
+            <Hero />
+          </motion.div>
+          <motion.div className="w-full" variants={pageStaggerItem}>
+            <Work />
+          </motion.div>
+          <motion.div className="w-full" variants={pageStaggerItem}>
+            <About />
+          </motion.div>
+          <motion.div className="w-full" variants={pageStaggerItem}>
+            <Contact />
+          </motion.div>
+          <motion.div className="w-full" variants={pageStaggerItem}>
+            <Footer />
+          </motion.div>
+        </main>
+      </motion.div>
     </>
   );
 }
