@@ -1,10 +1,59 @@
 import ProjectCard from "./ProjectCard";
-import { devProjects, designProjects, ProjectProps } from "./projectDetails";
-import { useState } from "react";
+import {
+  appsProjects,
+  devProjects,
+  designProjects,
+  ProjectProps,
+} from "./projectDetails";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const ProjectGrid = () => {
-  const [activeTab, setActiveTab] = useState<"dev" | "design">("dev");
+  const [activeTab, setActiveTab] = useState<"dev" | "design" | "apps">("dev");
+  const tabToHash = {
+    dev: "#work-development",
+    design: "#work-design",
+    apps: "#work-apps",
+  } as const;
+
+  useEffect(() => {
+    const { hash, search } = window.location;
+    const tabFromQuery = new URLSearchParams(search).get("workTab");
+
+    if (tabFromQuery === "design") {
+      setActiveTab("design");
+      return;
+    }
+
+    if (tabFromQuery === "apps") {
+      setActiveTab("apps");
+      return;
+    }
+
+    if (tabFromQuery === "dev") {
+      setActiveTab("dev");
+      return;
+    }
+
+    if (hash === tabToHash.design) {
+      setActiveTab("design");
+      return;
+    }
+
+    if (hash === tabToHash.apps) {
+      setActiveTab("apps");
+      return;
+    }
+
+    if (hash === tabToHash.dev) {
+      setActiveTab("dev");
+    }
+  }, []);
+
+  const handleTabChange = (tab: "dev" | "design" | "apps") => {
+    setActiveTab(tab);
+    window.history.replaceState(null, "", tabToHash[tab]);
+  };
 
   const tabVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -18,17 +67,25 @@ const ProjectGrid = () => {
           className={`text-[16px] transition-colors duration-300 md:text-[20px] lg:text-[24px] ${
             activeTab === "dev" ? "text-[#e4ded7]" : "text-[#e4ded7]/30"
           }`}
-          onClick={() => setActiveTab("dev")}
+          onClick={() => handleTabChange("dev")}
         >
-          Development
+          Websites
         </button>
         <button
           className={`text-[16px] transition-colors duration-300 md:text-[20px] lg:text-[24px] ${
             activeTab === "design" ? "text-[#e4ded7]" : "text-[#e4ded7]/30"
           }`}
-          onClick={() => setActiveTab("design")}
+          onClick={() => handleTabChange("design")}
         >
-          Design
+          Web Design
+        </button>
+        <button
+          className={`text-[16px] transition-colors duration-300 md:text-[20px] lg:text-[24px] ${
+            activeTab === "apps" ? "text-[#e4ded7]" : "text-[#e4ded7]/30"
+          }`}
+          onClick={() => handleTabChange("apps")}
+        >
+          Web Apps
         </button>
       </div>
 
@@ -40,20 +97,20 @@ const ProjectGrid = () => {
           exit="hidden"
           variants={tabVariants}
           transition={{ duration: 0.5 }}
-          className="grid w-[90%] grid-cols-1 grid-rows-2 gap-y-10 gap-x-6 lg:max-w-[1200px] lg:grid-cols-1"
+          className="grid w-[90%] grid-cols-1 gap-y-10 gap-x-6 md:grid-cols-2 lg:max-w-[1400px] lg:grid-cols-3"
         >
-          {(activeTab === "dev" ? devProjects : designProjects).map(
+          {(
+            activeTab === "design"
+              ? designProjects
+              : activeTab === "apps"
+                ? appsProjects
+                : devProjects
+          ).map(
             (project: ProjectProps) => (
               <ProjectCard
-                id={project.id}
                 key={project.id}
-                name={project.name}
-                description={project.description}
-                technologies={project.technologies}
-                github={project.github}
-                demo={project.demo}
-                image={project.image}
-                available={project.available}
+                {...project}
+                sourceTab={activeTab}
               />
             )
           )}

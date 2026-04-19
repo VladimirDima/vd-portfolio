@@ -4,7 +4,7 @@ import { pilowLava } from "../fonts/pilowlava/pilowLava";
 import { motion } from "framer-motion";
 import { imageAnimation, bodyAnimation } from "../animations/animations";
 import AnimatedWords from "../animations/AnimatedWords";
-import profile from "../../public/profile.webp";
+import profile from "../../public/profile.jpeg";
 
 const Hero = () => {
   return (
@@ -84,12 +84,12 @@ const Hero = () => {
           <p className="z-50 text-center text-[16px] font-medium text-[#e4ded7] md:text-[20px] lg:text-left">
             Frontend Developer, currently at{" "}
             <Link
-              href="https://www.evryone.io// "
+              href="https://www.forteadvice.com/"
               target="_blank"
               className="underline underline-offset-2 hover:no-underline"
-              aria-label="Evryone Website"
+              aria-label="Forte Advice Website"
             >
-              Evryone Group.
+              Forte Advice.
             </Link>
           </p>
         </motion.div>

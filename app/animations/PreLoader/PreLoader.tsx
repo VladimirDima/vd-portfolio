@@ -1,12 +1,33 @@
-"use cleint";
-import { useEffect } from "react";
+"use client";
+import { useEffect, useState } from "react";
 import { preLoaderAnim } from "./loader";
 import "./preloader.css";
 
 const PreLoader = () => {
+  const [shouldShowLoader, setShouldShowLoader] = useState<boolean | null>(null);
+
   useEffect(() => {
+    const hasSeenIntro = window.localStorage.getItem("hasSeenIntroAnimation");
+
+    if (hasSeenIntro === "true") {
+      document.body.style.overflowY = "auto";
+      setShouldShowLoader(false);
+      return;
+    }
+
+    document.body.style.overflowY = "hidden";
+    setShouldShowLoader(true);
     preLoaderAnim();
+    window.localStorage.setItem("hasSeenIntroAnimation", "true");
+
+    return () => {
+      document.body.style.overflowY = "auto";
+    };
   }, []);
+
+  if (!shouldShowLoader) {
+    return null;
+  }
 
   return (
     <div className="preloader gap-[5px] overflow-hidden text-[14px] sm:gap-[10px] sm:text-[16px] md:text-[18px] lg:text-[20px]">
