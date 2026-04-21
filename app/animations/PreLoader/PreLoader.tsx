@@ -4,7 +4,7 @@ import { preLoaderAnim } from "./loader";
 import "./preloader.css";
 
 const PreLoader = () => {
-  const [shouldShowLoader, setShouldShowLoader] = useState<boolean | null>(null);
+  const [shouldShowLoader, setShouldShowLoader] = useState(false);
 
   useEffect(() => {
     const hasSeenIntro = window.localStorage.getItem("hasSeenIntroAnimation");
@@ -17,10 +17,16 @@ const PreLoader = () => {
 
     document.body.style.overflowY = "hidden";
     setShouldShowLoader(true);
-    preLoaderAnim();
+    const timeline = preLoaderAnim();
+    const fallbackId = window.setTimeout(() => {
+      setShouldShowLoader(false);
+      document.body.style.overflowY = "auto";
+    }, 5600);
     window.localStorage.setItem("hasSeenIntroAnimation", "true");
 
     return () => {
+      window.clearTimeout(fallbackId);
+      timeline?.kill();
       document.body.style.overflowY = "auto";
     };
   }, []);

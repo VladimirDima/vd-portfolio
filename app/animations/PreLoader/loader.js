@@ -1,11 +1,9 @@
 import gsap from "gsap";
 
-// Declare a general timeline to use in all the animation functions.
-
-const tl = gsap.timeline();
-
 // Preloader Animation
 export const preLoaderAnim = () => {
+  const tl = gsap.timeline();
+
   tl.to(".texts-container", {
     duration: 0,
     opacity: 1,
@@ -43,7 +41,7 @@ export const preLoaderAnim = () => {
         duration: 1.5,
         height: "0vh",
         ease: "Power3.easeOut",
-        onComplete: mobileLanding(),
+        onComplete: mobileLanding,
       },
       "-=2"
     )
@@ -51,11 +49,13 @@ export const preLoaderAnim = () => {
       duration: 0,
       css: { display: "none" },
     });
+
+  return tl;
 };
 
 export const mobileLanding = () => {
   window.innerWidth < 763 &&
-    tl.from(".landing__main2", {
+    gsap.from(".landing__main2", {
       duration: 1,
       delay: 0,
       opacity: 0,
