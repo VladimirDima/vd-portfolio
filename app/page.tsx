@@ -1,7 +1,6 @@
 "use client";
 import Hero from "./hero-section/Hero";
 import { useEffect, useLayoutEffect, useState } from "react";
-import PreLoader from "./animations/PreLoader/PreLoader";
 import NavBar from "./navbar/NavBar";
 import { motion } from "framer-motion";
 import { usePageTransition } from "./context/PageTransitionContext";
@@ -51,8 +50,6 @@ export default function Home() {
 
   return (
     <>
-      <PreLoader />
-
       <motion.div
         key={animateEntry ? "enter" : "base"}
         className="w-full"
